@@ -1,7 +1,8 @@
 import streamlit as st
 
-# Set page title
+# page configurations
 st.title("License Plate Detection Application")
+
 
 # Upload image function
 def upload_image():
@@ -13,6 +14,7 @@ def upload_image():
                 f.write(uploaded_file.getvalue())
             st.success("Image uploaded and stored successfully!")
 
+
 # Upload video function
 def upload_video():
     uploaded_file = st.file_uploader("Upload Video to extract the license plates", type=["mp4"])
@@ -23,7 +25,7 @@ def upload_video():
                 f.write(uploaded_file.getvalue())
             st.success("Video uploaded and stored successfully!")
 
-# Call upload functions
+
 upload_image()
 upload_video()
 
